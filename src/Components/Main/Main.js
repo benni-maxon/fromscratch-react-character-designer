@@ -8,6 +8,7 @@ export default function Main() {
   const [rising, setRising] = useState('');
   const [sunCount, setSunCount] = useState(0);
   const [moonCount, setMoonCount] = useState(0);
+  const [risingCount, setRisingCount] = useState(0);
 
   return (
     <div>
@@ -17,8 +18,16 @@ export default function Main() {
         setRising={setRising}
         setSunCount={setSunCount}
         setMoonCount={setMoonCount}
+        setRisingCount={setRisingCount}
       />
-      <Display sun={sun} moon={moon} rising={rising} sunCount={sunCount} moonCount={moonCount} />
+      <Display
+        sun={sun}
+        moon={moon}
+        rising={rising}
+        sunCount={sunCount}
+        moonCount={moonCount}
+        risingCount={risingCount}
+      />
     </div>
   );
 }

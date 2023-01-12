@@ -1,7 +1,14 @@
 import React from 'react';
 import './Editor.css';
 
-export default function Editor({ setSun, setMoon, setRising, setSunCount, setMoonCount }) {
+export default function Editor({
+  setSun,
+  setMoon,
+  setRising,
+  setSunCount,
+  setMoonCount,
+  setRisingCount,
+}) {
   const handleSun = (e) => {
     setSun(e.target.value);
     setSunCount((currentState) => {
@@ -16,6 +23,9 @@ export default function Editor({ setSun, setMoon, setRising, setSunCount, setMoo
   };
   const handleRising = (e) => {
     setRising(e.target.value);
+    setRisingCount((currentState) => {
+      return currentState + 1;
+    });
   };
   return (
     <div className="editor">

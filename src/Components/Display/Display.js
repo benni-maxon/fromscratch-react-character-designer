@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Display({ sun, moon, rising, sunCount, moonCount }) {
+export default function Display({ sun, moon, rising, sunCount, moonCount, risingCount }) {
   return (
     <div>
       <div className="signs-div">
@@ -11,8 +11,10 @@ export default function Display({ sun, moon, rising, sunCount, moonCount }) {
       <div className="stats-div">
         <p>
           You have changed your Sun Sign {sunCount} times, your Moon Sign {moonCount} times, and
-          your Rising Sign - times.{' '}
+          your Rising Sign {risingCount} times.
         </p>
+        <h2>Your Affirmations:</h2>
+        <ul></ul>
       </div>
     </div>
   );
