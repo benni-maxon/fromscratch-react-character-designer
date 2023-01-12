@@ -4,11 +4,12 @@ import Editor from '../Editor/Editor.js';
 
 export default function Main() {
   const [sun, setSun] = useState('');
+  const [moon, setMoon] = useState('');
 
   return (
     <div>
-      <Editor setSun={setSun} />
-      <Display sun={sun} />
+      <Editor setSun={setSun} setMoon={setMoon} />
+      <Display sun={sun} moon={moon} />
     </div>
   );
 }
