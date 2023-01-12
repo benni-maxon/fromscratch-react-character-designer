@@ -1,11 +1,15 @@
 import React from 'react';
 import './Editor.css';
 
-export default function Editor() {
+export default function Editor({ setSun }) {
+  const handleSun = (e) => {
+    setSun(e.target.value);
+  };
   return (
     <div className="editor">
       <div>
-        <select>
+        <label>Sun: </label>
+        <select onChange={handleSun}>
           <option value="aries">Aries</option>
           <option value="taurus">Taurus</option>
           <option value="gemini">Gemini</option>
