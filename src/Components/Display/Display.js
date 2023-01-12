@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Display({ sun, moon, rising, sunCount }) {
+export default function Display({ sun, moon, rising, sunCount, moonCount }) {
   return (
     <div>
       <div className="signs-div">
@@ -9,7 +9,10 @@ export default function Display({ sun, moon, rising, sunCount }) {
         <img alt={rising} src={`${process.env.PUBLIC_URL}/signs/${rising}.png`} />
       </div>
       <div className="stats-div">
-        <p>You have changed your Sun Sign {sunCount} times. </p>
+        <p>
+          You have changed your Sun Sign {sunCount} times, your Moon Sign {moonCount} times, and
+          your Rising Sign - times.{' '}
+        </p>
       </div>
     </div>
   );
