@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Editor.css';
 
 export default function Editor({
@@ -8,7 +8,10 @@ export default function Editor({
   setSunCount,
   setMoonCount,
   setRisingCount,
+  setAffirmations,
 }) {
+  const [input, setInput] = useState('');
+
   const handleSun = (e) => {
     setSun(e.target.value);
     setSunCount((currentState) => {
@@ -26,6 +29,13 @@ export default function Editor({
     setRisingCount((currentState) => {
       return currentState + 1;
     });
+  };
+  //This function needs to be completed.
+  const handleAffirmations = () => {
+    setAffirmations(input.valueOf);
+  };
+  const handleInput = (e) => {
+    setInput(e.target.value);
   };
   return (
     <div className="editor">
@@ -79,6 +89,11 @@ export default function Editor({
           <option value="aquarius">Aquarius</option>
           <option value="pisces">Pisces</option>
         </select>
+      </div>
+      <div>
+        <label>Affirmations: </label>
+        <input type="text" onChange={handleInput} />
+        <button onClick={handleAffirmations}>Submit</button>
       </div>
     </div>
   );

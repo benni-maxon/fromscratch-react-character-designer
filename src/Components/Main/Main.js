@@ -9,6 +9,7 @@ export default function Main() {
   const [sunCount, setSunCount] = useState(0);
   const [moonCount, setMoonCount] = useState(0);
   const [risingCount, setRisingCount] = useState(0);
+  const [affirmations, setAffirmations] = useState([]);
 
   return (
     <div>
@@ -19,6 +20,7 @@ export default function Main() {
         setSunCount={setSunCount}
         setMoonCount={setMoonCount}
         setRisingCount={setRisingCount}
+        setAffirmations={setAffirmations}
       />
       <Display
         sun={sun}
@@ -27,6 +29,7 @@ export default function Main() {
         sunCount={sunCount}
         moonCount={moonCount}
         risingCount={risingCount}
+        affirmations={affirmations}
       />
     </div>
   );
