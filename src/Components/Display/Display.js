@@ -1,6 +1,14 @@
 import React from 'react';
 
-export default function Display({ sun, moon, rising, sunCount, moonCount, risingCount }) {
+export default function Display({
+  sun,
+  moon,
+  rising,
+  sunCount,
+  moonCount,
+  risingCount,
+  affirmations,
+}) {
   return (
     <div>
       <div className="signs-div">
@@ -14,7 +22,11 @@ export default function Display({ sun, moon, rising, sunCount, moonCount, rising
           your Rising Sign {risingCount} times.
         </p>
         <h2>Your Affirmations:</h2>
-        <ul></ul>
+        <ul>
+          {affirmations.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

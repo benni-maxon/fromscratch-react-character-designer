@@ -32,7 +32,10 @@ export default function Editor({
   };
   //This function needs to be completed.
   const handleAffirmations = () => {
-    setAffirmations(input.valueOf);
+    setAffirmations((currentState) => {
+      return [...currentState, input];
+    });
+    setInput('');
   };
   const handleInput = (e) => {
     setInput(e.target.value);
@@ -92,7 +95,7 @@ export default function Editor({
       </div>
       <div>
         <label>Affirmations: </label>
-        <input type="text" onChange={handleInput} />
+        <input type="text" onChange={handleInput} value={input} />
         <button onClick={handleAffirmations}>Submit</button>
       </div>
     </div>
