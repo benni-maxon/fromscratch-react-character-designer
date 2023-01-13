@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Display.css';
+
 export default function Display({
   sun,
   moon,

@@ -1,5 +1,12 @@
 import React from 'react';
+import './Header.css';
 
 export default function Header() {
-  return <header>Big Three</header>;
+  return (
+    <header>
+      <h1>
+        <span className="big-span">Big</span> Three
+      </h1>
+    </header>
+  );
 }

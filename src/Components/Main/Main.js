@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Display from '../Display/Display.js';
 import Editor from '../Editor/Editor.js';
 
+import './Main.css';
+
 export default function Main() {
   const [sun, setSun] = useState('');
   const [moon, setMoon] = useState('');
@@ -12,7 +14,7 @@ export default function Main() {
   const [affirmations, setAffirmations] = useState([]);
 
   return (
-    <div>
+    <div className="main-div">
       <Editor
         setSun={setSun}
         setMoon={setMoon}

@@ -42,9 +42,10 @@ export default function Editor({
   };
   return (
     <div className="editor">
-      <div>
+      <div className="sign-select">
         <label>Sun: </label>
         <select onChange={handleSun}>
+          <option value="">Select One</option>
           <option value="aries">Aries</option>
           <option value="taurus">Taurus</option>
           <option value="gemini">Gemini</option>
@@ -59,9 +60,10 @@ export default function Editor({
           <option value="pisces">Pisces</option>
         </select>
       </div>
-      <div>
+      <div className="sign-select">
         <label>Moon: </label>
         <select onChange={handleMoon}>
+          <option value="">Select One</option>
           <option value="aries">Aries</option>
           <option value="taurus">Taurus</option>
           <option value="gemini">Gemini</option>
@@ -76,9 +78,10 @@ export default function Editor({
           <option value="pisces">Pisces</option>
         </select>
       </div>
-      <div>
+      <div className="sign-select">
         <label>Rising: </label>
         <select onChange={handleRising}>
+          <option value="">Select One</option>
           <option value="aries">Aries</option>
           <option value="taurus">Taurus</option>
           <option value="gemini">Gemini</option>
