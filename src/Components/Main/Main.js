@@ -16,22 +16,26 @@ export default function Main() {
   return (
     <div className="main-div">
       <Editor
-        setSun={setSun}
-        setMoon={setMoon}
-        setRising={setRising}
-        setSunCount={setSunCount}
-        setMoonCount={setMoonCount}
-        setRisingCount={setRisingCount}
-        setAffirmations={setAffirmations}
+        {...{
+          setSun,
+          setMoon,
+          setRising,
+          setSunCount,
+          setMoonCount,
+          setRisingCount,
+          setAffirmations,
+        }}
       />
       <Display
-        sun={sun}
-        moon={moon}
-        rising={rising}
-        sunCount={sunCount}
-        moonCount={moonCount}
-        risingCount={risingCount}
-        affirmations={affirmations}
+        {...{
+          sun,
+          moon,
+          rising,
+          sunCount,
+          moonCount,
+          risingCount,
+          affirmations,
+        }}
       />
     </div>
   );

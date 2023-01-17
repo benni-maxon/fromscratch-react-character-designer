@@ -14,9 +14,9 @@ export default function Display({
   return (
     <div className="signs-and-stats-div">
       <div className="signs-div">
-        <img alt={sun} src={`${process.env.PUBLIC_URL}/signs/${sun}.png`} />
-        <img alt={moon} src={`${process.env.PUBLIC_URL}/signs/${moon}.png`} />
-        <img alt={rising} src={`${process.env.PUBLIC_URL}/signs/${rising}.png`} />
+        <img alt={sun} src={`./signs/${sun}.png`} />
+        <img alt={moon} src={`./signs/${moon}.png`} />
+        <img alt={rising} src={`./signs/${rising}.png`} />
       </div>
       <div className="stats-div">
         <p className="stats-p">
