@@ -1,0 +1,17 @@
+li {
+  list-style-position: inside;
+}
+
+.signs-and-stats-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signs-div {
+  width: 320px;
+  height: 105px;
+  border: dotted rgb(219, 151, 218) 4px;
+  border-radius: 15px;
+  margin: 10px;
+}
